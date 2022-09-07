@@ -1,0 +1,43 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "MyBankContext",
+   "ContextNamespace": "Data.Database",
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": "Data.Entity",
+   "OutputContextPath": "Data\/Database",
+   "OutputPath": "Data\/Entity",
+   "ProjectRootNamespace": "Infrastructure",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[cartao_credito]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[extrato_cartao]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "NGM-02\\SQLEXPRESS01.MYBANK",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": true,
+   "UseSpatial": false
+}
