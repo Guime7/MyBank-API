@@ -13,8 +13,8 @@ namespace Core.Services
         }
 
         public CartaoCredito GetCartao()
-        {
-            return new CartaoCredito();
+        { 
+            return _cartaoCreditoRepository.getCartao();
         }
     }
 }

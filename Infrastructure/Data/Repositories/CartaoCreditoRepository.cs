@@ -1,4 +1,6 @@
 ﻿using Core.Interfaces.Repositories;
+using Core.Models;
+using Infrastructure.Data.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,24 @@ namespace Infrastructure.Data.Repositories
 {
     public class CartaoCreditoRepository : ICartaoCreditoRepository
     {
-        public string getCartao()
+        private MyBankContext _context;
+        public CartaoCreditoRepository(MyBankContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public CartaoCredito getCartao()
+        {
+            return
+                (from c in _context.cartao_credito
+                 select new CartaoCredito
+                 {
+                     idCartao = c.id_cartao,
+                     nomeCartao = c.nome_cartao,
+                     bandeira = c.bandeira,
+                     emissor = c.emissor,
+                     limite = c.limite,
+                     status = c.status,
+                 }).First();
         }
     }
 }

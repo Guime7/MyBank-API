@@ -5,6 +5,7 @@ using Core.Interfaces.Repositories;
 using Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Infrastructure.Data.Database;
 
 namespace IoC
 {
@@ -13,13 +14,13 @@ namespace IoC
         public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddDbContext<DbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddDbContext<MyBankContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
              
+            services.AddScoped<ICartaoCreditoRepository, CartaoCreditoRepository>();
+
             services.AddScoped<ICartaoCreditoServices, CartaoCreditoServices>();
 
 
-            services.AddScoped<ICartaoCreditoRepository, CartaoCreditoRepository>();
 
         }
 

@@ -16,17 +16,17 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
-                return Ok();
+                return Ok(_cartaocreditoServices.GetCartao());
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
-        
+
     }
 }
